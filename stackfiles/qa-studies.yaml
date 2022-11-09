@@ -6,9 +6,7 @@ inputs:
   api_license: ISC
 plugins:
 - plugin: qa-coders-nodejs-stack/mocha-plugin
-  inputs:
 - plugin: qa-coders-nodejs-stack/mongoose-plugin
-  inputs:
 - plugin: qa-coders-nodejs-stack/register-api-sample-plugin
   inputs:
     register_api_test: false
