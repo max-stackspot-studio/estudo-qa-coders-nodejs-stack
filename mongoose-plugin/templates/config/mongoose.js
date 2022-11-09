@@ -5,7 +5,7 @@ const mongoDbConfig = require("./mongodb-config.json")
 if (args.production)
     module.exports = mongoose.connect(mongoDbConfig.connection)
 else
-    module.exports = mongoose.connect('mongodb://localhost/banco_dados')    
+    module.exports = mongoose.connect(mongoDbConfig.devConnection)    
 
 mongoose.Error.messages.general.required = "O campo '{PATH}' é obrigatório."
 mongoose.Error.messages.Number.min = "O '{PATH}' informado é menor que o limite mínimo de '{MIN}'."

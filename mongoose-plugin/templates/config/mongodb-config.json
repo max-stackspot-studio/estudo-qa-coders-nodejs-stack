@@ -1,3 +1,4 @@
 {
-    "connection":"{{mongodb_connection_production}}"
+    "connection":"{{mongodb_connection_production}}",
+    "devConnection":"{{mongodb_connection_dev}}"
 }

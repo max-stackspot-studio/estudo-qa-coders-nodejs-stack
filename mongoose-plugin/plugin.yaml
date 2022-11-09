@@ -15,10 +15,22 @@ technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/
 types:
   - app
 inputs:
-  - label: Input MongoDB connection string
+  - label: Input MongoDB connection for production
     type: text
     name: mongodb_connection_production
     default: mongodb://nome_banco:senha@servidor.com.br:27017/usuario
+
+  - label: Add MongoDB by Docker-Compose file?
+    type: bool
+    name: use_mongodb_on_docker_compose
+    default: true
+    
+  - label: Input MongoDB connection for development
+    type: text
+    name: mongodb_connection_dev
+    default: mongodb://root:example@mongo:27017/
+
+    
   # - label: Example of number
   #   type: int
   #   name: any_number
@@ -31,6 +43,15 @@ inputs:
   #     - item2
 
 hooks:
+
+  - type: render-templates
+    trigger: after-render
+    path: docker-templates
+    condition:
+      variable: use_mongodb_on_docker_compose
+      operator: ==
+      value: true
+
   - type: run
     trigger: after-render
     commands:
