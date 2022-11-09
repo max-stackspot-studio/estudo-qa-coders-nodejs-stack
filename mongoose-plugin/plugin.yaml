@@ -51,11 +51,11 @@ hooks:
         update:
           value: |
             {
-              "mongoose": "./config/mongoose"
+              "mongoose": "./mongoose"
             }
         when:
           not-exists: "$.mongoose"
       - jsonpath: "$.mongoose"
         update:
           value: |
-            "./config/mongoose"
+            "./mongoose"
