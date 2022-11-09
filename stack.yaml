@@ -4,12 +4,22 @@ display-name: qa-coders-nodejs-stack
 picture: stack.png
 category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category
 compatibility: # Put a list of technologies compatible with the stack
-  - java
-  - spring
+  - javascript
+  - express
+  - mongoose
+  - mocha
+  - chai
 technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies 
-  - docker 
+  - Api
+  - Rest 
 about: docs/about.md
 use-cases:
-  - title: Use Case Title
+  - title: Aplicação NodeJS Simples
     content: docs/use-case.md
     stackfile: stackfiles/default.yaml
+  - title: Aplicação NodeJS para estudos TDD
+    content: docs/tdd-studies-use-case.md
+    stackfile: stackfiles/tdd-studies.yaml
+  - title: Aplicação NodeJS para aulas QA
+    content: docs/qa-studies-use-case.md
+    stackfile: stackfiles/qa-studies.yaml

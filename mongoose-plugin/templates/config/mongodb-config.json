@@ -1,0 +1,3 @@
+{
+    "connection":"{{mongodb_connection_production}}"
+}
