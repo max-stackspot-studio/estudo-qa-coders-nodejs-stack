@@ -29,6 +29,7 @@ inputs:
   #   items:
   #     - item1
   #     - item2
+
 hooks:
   - type: run
     trigger: after-render
@@ -38,7 +39,7 @@ hooks:
       - npm install mongoose
       - npm install mongoose-beautiful-unique-validation
       - npm install mongoose-paginate
-      - npm install -D mongodb-memory-server
+      - npm install -D mongodb-memory-server @faker-js/faker
       - npm install node-restful
 
   - type: edit-json

@@ -24,7 +24,7 @@ hooks:
   - type: run
     trigger: after-render
     commands:
-      - npm install -D mocha chai chai-http
+      - npm install -D mocha chai chai-http @faker-js/faker
 
   - type: edit-json
     trigger: after-render
